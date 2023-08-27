@@ -1,8 +1,22 @@
+<table>
+  <tr>
+    <td>
+      <img src="../imgs/unipam-logo.png" alt="drawing" width="100"/>  
+    </td>
+    <td>
+      <H4>Prof. Me. Alexandre Henrick</H4> <H4>Análise e Desenvolvimento de Sistemas - 6º período Sistemas de Informação</H4>
+    </td>
+  </tr>
+</table>
+
+---
+
 <center><H1>Adapter</H1></center>
+
 
 **Descrição**
 
-O nome **Adapter** descreve perfeitamente bem a aplicabilidade deste padrão. O Adapter permite a colaboração de **objetos com interfaces incompatíveis**. Isto é, conseguimos permitir que um objeto adapte-se à interface de outro objeto sem precisar modificar o código-fonte desse objeto. De maneira resumida, a implentação do Adapter envolva a criação de uma **Classe** intermediária, chamada de **adaptador**, que implementa a interface desejada e ao mesmo tempo mantém uma referência ao objeto que possui a interface incompatível. Dessa forma, conseguimos fazer a tradução necessárias das chamadas dos métodos.
+O nome **Adapter** descreve perfeitamente bem a aplicabilidade deste padrão. O Adapter permite a colaboração de **objetos com interfaces incompatíveis**. Isto é, conseguimos permitir que um objeto adapte-se à interface de outro objeto sem precisar modificar o código-fonte desse objeto. De maneira resumida, a implementação do Adapter envolve a criação de uma **Classe** intermediária, chamada de **adaptador**, que implementa a interface desejada e ao mesmo tempo mantém uma referência ao objeto que possui a interface incompatível. Dessa forma, conseguimos fazer a tradução necessária das chamadas dos métodos.
 
 ---
 
@@ -10,11 +24,11 @@ O nome **Adapter** descreve perfeitamente bem a aplicabilidade deste padrão. O 
 
 Vamos imaginar um cenário para ilustrar o uso do Adapter:
 
-Em sua empresa, você desenvolveu um código que realiza a migração dos produtos do ambiente de desenvolvimento para o ambiente de produção de maneira automatizada. Nesse código, você publica suas aplicações em uma máquina virtual de produção, que é o padrão usado na empresa. Recentemente, o gerente do projeto lhe pediu para não publicar as aplicações na máquina virtual. Agora, será necessário utilizar uma nova tecnologia, o Kubernetes. Sabendo que novas mudanças podem ser requisitadas no futuro e que também é necessário escrever um código que seja fácil de manter, você decide que irá utilizar o padrão **Adapter**.
+Em sua empresa, você desenvolveu um código que realiza a migração dos produtos do ambiente de desenvolvimento para o ambiente de produção de maneira automatizada. Nesse código, você publica suas aplicações em uma máquina virtual de produção, que é o padrão usado na empresa. Recentemente, o gerente do projeto lhe pediu para não publicar as aplicações na máquina virtual. Agora, será necessário utilizar uma nova tecnologia, o Kubernetes.
 
 ![cenario](../imgs/adapter1.jpg)
 
-O diagrama de classes do Adapter usando o cenário acima como exemplo ficaria como a imagem abaixo. Dessa maneira, nossa classe que já executa a migração poderá ser reutilizada e seu método será adaptado para migrar dentro de um cluster Kubernetes.
+Sabendo que novas mudanças podem ser requisitadas no futuro e que também é necessário escrever um código que seja fácil de manter, você decide que irá utilizar o padrão **Adapter**. O diagrama de classes do Adapter usando o cenário acima como exemplo ficaria como a imagem abaixo. Dessa maneira, nossa classe que já executa a migração poderá ser reutilizada e seu método será adaptado para migrar dentro de um cluster Kubernetes.
 
 ![cenario](../imgs/adapter2.jpg)
 
