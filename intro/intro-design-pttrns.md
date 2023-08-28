@@ -9,10 +9,11 @@
   </tr>
 </table>
 
+---
 
 <center><H1>Padrões de Projeto GOF (Gang of Four)</H1></center>
 
-**Resumo**s
+**Resumo**
 
 Os padrões de projeto GOF (Gang of Four) são um conjunto de 23 padrões de projeto que foram formalizados e catalogados por Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides em seu livro "Design Patterns: Elements of Reusable Object-Oriented Software", publicado em 1994. Esses padrões foram desenvolvidos para fornecer soluções comuns para problemas recorrentes no design de software orientado a objetos.
 
