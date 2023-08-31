@@ -31,7 +31,7 @@ Nos anos 90, a programação orientada a objetos estava ganhando popularidade, m
 
 Os 23 padrões GOF são divididos em três categorias:
 
-- Padrões de Criação:
+- Padrões de Criação. Os padrões de criação se concentram em como criar objetos de maneira eficiente e flexível, abstraindo o processo de criação e ocultando os detalhes de implementação específicos:
     - Singleton
     - Factory Method
     - Abstract Factory
@@ -40,7 +40,7 @@ Os 23 padrões GOF são divididos em três categorias:
     
 ---
 
-- Padrões de Estrutura:
+- Padrões de Estrutura. Os padrões de projetos estruturais concentram-se em como as classes e objetos são compostos para formar estruturas maiores. Eles visam melhorar a organização, a relação e a composição entre as classes e objetos, garantindo que a estrutura do código seja flexível, extensível e facilmente compreensível:
     - Adapter
     - Bridge
     - Composite
@@ -51,7 +51,7 @@ Os 23 padrões GOF são divididos em três categorias:
 
 ---
 
-- Padrões de Comportamento:
+- Padrões de Comportamento. Enquanto os padrões estruturais se concentram na organização de classes e objetos, os padrões comportamentais se concentram em como os objetos interagem e colaboram para definir o comportamento do sistema:
     - Chain of Responsibility
     - Command
     - Interpreter
