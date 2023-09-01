@@ -120,14 +120,3 @@ pod = Podcast(ps)
 pod.play()
 
 ```
-
----
-
-**Acessando repositório da disciplina**:
-
-Os códigos, PDFs e markdown files podem ser encontrados no [neste repositório](https://github.com/prof-alexandre-sh/6p-design-patterns). Fique à vontade para contribuir com o conteúdo!
-
-Para clonar o repositório:
-
-```git
-git clone https://github.com/prof-alexandre-sh/6p-design-patterns.git

@@ -108,15 +108,3 @@ aplicacao = "some_code"
 kubernetes_adapter.migrate_to_kubernetes(aplicacao)  # Usando o adaptador para migração para Kubernetes
 #real_kubernetes_migrator.migrate_to_kubernetes(aplicacao)  # Usando a classe concreta para migração para Kubernetes
 ```
-
----
-
-**Acessando repositório da disciplina**:
-
-Os códigos, PDFs e markdown files podem ser encontrados no [neste repositório](https://github.com/prof-alexandre-sh/6p-design-patterns). Fique à vontade para contribuir com o conteúdo!
-
-Para clonar o repositório:
-
-```git
-git clone https://github.com/prof-alexandre-sh/6p-design-patterns.git
-```
