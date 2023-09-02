@@ -11,7 +11,7 @@
 
 ---
 
-<center><H1>Revisão Python - Em desenvolvimento</H1></center>
+<center><H1>Revisão Python</H1></center>
 
 ## **Sintaxe**
 
@@ -116,9 +116,9 @@ while contador < 5:
 
 Funções:
 
-- Definidas usando a palavra-chave def.
+- Definidas usando a palavra-chave **def**.
 - Podem ter argumentos e valores de retorno.
-- return para retornar valores.
+- **return** para retornar valores.
 
 ```python
 def saudacao(nome):
@@ -137,15 +137,60 @@ Listas e Dicionários:
 - Indexação começa em 0.
 
 ```python
-numeros = [1, 2, 3, 4, 5]
-pessoa = {'nome': 'Alice', 'idade': 30}
+numeros = [1, 2, 3, 4, 5] # Lista
+pessoa = {'nome': 'Alice', 'idade': 30} # Dicionário
 
-print(numeros[2])  # Saída: 3
-print(pessoa['nome'])  # Saída: Alice
+# ====== OPERAÇÕES COM LISTAS ======
+
+print(numeros[2])  # Acessando elementos em lista. Saída: 3
+
+# Método append adiciona um elemento a lista. No caso abaixo, adiciona ao final da lista
+numeros.append(6)
+
+# Método remove exclui um elemento da lista. No exemplor abaixo, exclui o elemento 3
+numeros.remove(3)
+
+# Podemos usar o "in" para verificar se um elemento existe na lista. A operação com "in" nos retorna um valor booleano (True ou False)
+existe_na_lista = 4 in numeros
+
+# Método sort() ordena a lista em ordem crescente
+numeros.sort()
+
+# O método reverse() inverte a ordem de uma lista
+numeros.reverse()
+
+# Podemos "fatiar" uma lista da maneira abaixo. Aqui estamos dizendo que queremos retornar os elementos do índice 1 ao 3
+nova_lista = numeros[1:4]
 
 ## Feature mais interessante do python: List Comprehension
 quadrados = [X ** 2 for x in range(10)]
 print(quadrados)
+
+# ====== OPERAÇÕES COM DICIONÁRIOS ======
+
+print(pessoa['nome'])  # Acessando elementos em dicionários Saída: Alice
+
+## Adicionando mais uma chave e valor
+dicionario['email'] = 'exemplo@gmail.com'
+
+## Usamos o operador "del" para um par de chave-valor
+del dicionario['email']
+
+## Assim como nas listas, também podemos usar o "in" para verificar se uma chave existe no dicionário
+existe_chave = 'nome' in dicionario
+
+## Os métodos keys() e values() retornam as chaves e valores de um dicionário
+dicionario.keys()
+dicionario.values()
+
+## Os exemplos acima não retornam em um formato de lista. Para isso, podemos usar o método list() como no exemplo abaixo
+chaves = list(dicionario.keys())
+valores = list(dicionario.values()) 
+
+## Podemos iterar sobre um dicionário usando o método items()
+for chave, valor in dicionario.items():
+    print(f'{chave}: {valor}')
+
 ```
 
 ---
@@ -205,11 +250,12 @@ Classes e Orientação a Objetos:
 - Definidas usando a palavra-chave class.
 - Possuem métodos (funções) e atributos (variáveis).
 - Herança, encapsulamento e polimorfismo são suportados.
+- __init__ é como chamamos os métodos construtores em python
 - O 'self' usamos para referir ao próprio objeto de uma classe dentro dos métodos dessa classe.
 
 ```python
 class Animal:
-    def __init__(self, nome):
+    def __init__(self, nome): # Método construtor de 'Animal' sempre vai receber como parâmetro 'nome', que será um atributo da classe
         self.nome = nome
 
     def falar(self):
@@ -239,3 +285,4 @@ with open("arquivo.txt", "r") as arquivo:
     conteudo = arquivo.read()
     print(conteudo)
 ```
+
