@@ -15,7 +15,7 @@
 
 **Descrição**
 
-Assim como o Adapter é um padrão **estrutural**, e tem como objetivo separar a abstração (abstração de alto nível - que delega) de sua implementação (implementação de baixo nível). Importante lembrar que nesse contexto **não estamos falando de classes abstratas como vimos em orientação a objetos**. No contexto do Bridge, a **Abstração é um código que delega ações para outro objeto**, e a **Implementação é o código que realmente implementa essas ações**. O Bridge busca desacoplar a abstração da implementação permitindo que ambas cresçam de maneira independente. Ou seja, vamos ter diferentes hierarquias em nosso código, facilitando sua manutenção.
+Assim como o Adapter, o Bridge taḿbém é um padrão **estrutural**, e tem como objetivo separar a abstração (abstração de alto nível - que delega) de sua implementação (implementação de baixo nível). Importante lembrar que nesse contexto **não estamos falando de classes abstratas como vimos em orientação a objetos**. No contexto do Bridge, a **Abstração é um código que delega ações para outro objeto**, e a **Implementação é o código que realmente implementa essas ações**. O Bridge busca desacoplar a abstração da implementação permitindo que ambas cresçam de maneira independente. Ou seja, vamos ter diferentes hierarquias em nosso código, facilitando sua manutenção.
 
 ---
 
@@ -111,6 +111,7 @@ class Musica(Conteudo):
     def play(self):
         self.dispositivo.toca_conteudo("Musica")
 
+# Perceba que aqui estamos fazendo a "ponte (bridge)" entre conteúdo e dispositivo, passando o objeto que representa o dispositivo e usando seu método tocar o conteúdo.
 sp = Smartphone()
 musica = Musica(sp)
 musica.play()
