@@ -269,6 +269,25 @@ cat = Gato("Whiskas")
 print(cat.falar())
 ```
 
+Usando classes e métodos abstratos:
+
+```python
+'''
+Abstract Base Class (ABC). Módulo do python que nos ajuda a contruir classes
+e métodos abstratos.
+'''
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    '''
+    As classes que implementarem "Animal" precisam
+    implementar o método "alimentar()"
+    '''
+    @abstractmethod # Usamos esse decorador para definir um método abstrato
+    def alimentar(self):
+        pass
+```
+
 ---
 
 Arquivos:
