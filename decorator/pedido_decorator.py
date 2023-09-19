@@ -1,5 +1,4 @@
 # Pedido base
-
 class Pedido:
     def __init__(self, numero_pedido):
         self.numero_pedido = numero_pedido
@@ -15,13 +14,15 @@ class Pedido:
     def preco(self):
         return self.precos_sem_adicionais[self.numero_pedido]
 
-class PedidoDecorator:
+# Decorador base
+class PedidoDecorator(Pedido):
     def __init__(self, pedido):
         self.pedido = pedido
 
     def preco(self):
         return self.pedido.preco()
 
+# Decoradores concretos
 class Adicional1(PedidoDecorator):
     def preco(self):
         return self.pedido.preco() + 3

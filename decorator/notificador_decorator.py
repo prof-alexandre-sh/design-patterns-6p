@@ -9,7 +9,7 @@ class Message:
 # Decorador base
 class NotificationDecorator(Message):
     def __init__(self, message):
-        self._message = message
+        self._message = message # Composição. Decorator TEM um componente base
 
     def send(self):
         return self._message.send()
@@ -37,7 +37,7 @@ email_notification = EmailNotification(basic_message)
 sms_notification = SMSNotification(email_notification)
 teams_notification = MsTeamsNotification(sms_notification)
 
-#print(basic_message.send())
+print(basic_message.send())
 #print(email_notification.send())
 #print(sms_notification.send())
-print(teams_notification.send())
+#print(teams_notification.send())
