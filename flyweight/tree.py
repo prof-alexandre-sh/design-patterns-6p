@@ -39,12 +39,14 @@ if __name__ == "__main__":
     # Criar tipos de árvores compartilhados
     tree_type1 = TreeTypeFactory.get_tree_type("Carvalho", "Verde", "Rugosa")
     tree_type2 = TreeTypeFactory.get_tree_type("Bordo", "Vermelha", "Lisa")
+    tree_type3 = TreeTypeFactory.get_tree_type("Bordo", "Vermelha", "Lisa")
 
     # Criar árvores individuais na floresta
     forest.append(Tree(1, 2, tree_type1))
-    forest.append(Tree(3, 4, tree_type1)) # Aqui ele não cria um objeto novo. Reutiliza o que já existe
+    forest.append(Tree(3, 4, tree_type1))
     forest.append(Tree(5, 6, tree_type2))
     forest.append(Tree(7, 8, tree_type2))
+    forest.append(Tree(9, 10, tree_type3)) # Aqui ele não cria um objeto novo. Reutiliza o que já existe
 
     # Renderizar as árvores
     for tree in forest:

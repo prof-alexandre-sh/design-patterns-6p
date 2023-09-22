@@ -46,12 +46,14 @@ if __name__=='__main__':
     # Criar formatações de caracteres - compartilhados
     formatacao_1 = FlyweightFabrica.get_formatacao("calibri", "12", "a")
     formatacao_2 = FlyweightFabrica.get_formatacao("arial", "11", "b")
+    formatacao_3 = FlyweightFabrica.get_formatacao("arial", "11", "b")
 
     # Criar caracteres individuais
     formatos.append(Caracter("linha 1", formatacao_1))
-    formatos.append(Caracter("linha 2", formatacao_1)) # Aqui ele não cria um objeto novo. Reutiliza o que já existe
+    formatos.append(Caracter("linha 2", formatacao_1))
     formatos.append(Caracter("linha 2", formatacao_2))
     formatos.append(Caracter("linha 3", formatacao_2))
+    formatos.append(Caracter("linha 4", formatacao_3)) # Aqui ele não cria um objeto novo. Reutiliza o que já existe
 
     for caracter in formatos:
         caracter.mostrar()
