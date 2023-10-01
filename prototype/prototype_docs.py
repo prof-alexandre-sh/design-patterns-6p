@@ -11,6 +11,12 @@ import time
 # Protótipo base para documentos
 class DocumentPrototype:
     def clone(self):
+        '''
+        deepcopy: Faz uma cópia do objeto instanciado e, se esse objeto for composto (possuir outros objetos),
+        faz a cópia deles também.
+
+        copy: Faz uma cópia do objeto instanciado e cria referências dos objetos que compõe o mesmo.
+        '''
         return copy.deepcopy(self)
 
     def render(self):
