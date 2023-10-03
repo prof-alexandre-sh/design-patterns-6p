@@ -77,9 +77,19 @@ class Client:
         # Poderíamos usar subclasses para isso. Mas com os clones conseguimos fazer apenas uma criação
         # e obter 3 objetos com saídas diferentes
         print(html1.render('Relatório aluno 1', 'Notas', 'aluno 1'))
-        print(html1.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
-        print(html1.render('Relatório aluno 3', 'Atividades', 'aluno 3'))
+        print(html2.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
+        print(html3.render('Relatório aluno 3', 'Atividades', 'aluno 3'))
+
+    def gera_htmls_sem_prot(self):
+
+        html1 = HTMLDocument()
+        print(html1.render('Relatório aluno 1', 'Notas', 'aluno 1'))
+        html2 = HTMLDocument()
+        print(html2.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
+        html3 = HTMLDocument()
+        print(html3.render('Relatório aluno 3', 'Atividades', 'aluno 3'))
 
 if __name__ == "__main__":
      cl = Client()
      cl.gera_htmls() # Com prototype. Criamos um objeto o clonamos os restantes
+     #cl.gera_htmls_sem_prot()
