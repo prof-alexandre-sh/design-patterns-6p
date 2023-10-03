@@ -24,6 +24,7 @@ class DocumentPrototype:
 
 # Protótipo de documento HTML
 class HTMLDocument(DocumentPrototype):
+    # Simulando inicialização do documento
     def __init__(self):
         print("Inicializando um HTML...")
         print("Inicializando metadados...")
@@ -69,23 +70,16 @@ class Client:
         html2 = manager.create("HTML")
         html3 = manager.create("HTML")
 
+        print(f"Protótipo criados: {len(manager._prototypes)}")
+        print ("\n------\n")
+
         # Renderizamos 3 htmls copiando de 1 protótipo. Apenas 1 criação
         # Poderíamos usar subclasses para isso. Mas com os clones conseguimos fazer apenas uma criação
         # e obter 3 objetos com saídas diferentes
         print(html1.render('Relatório aluno 1', 'Notas', 'aluno 1'))
-        print(html2.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
-        print(html1.render('Relatório aluno 3', 'Atividades', 'aluno 3'))
-
-    def gera_htmls_sem_prot(self):
-
-        html1 = HTMLDocument()
-        print(html1.render('Relatório aluno 1', 'Notas', 'aluno 1'))
-        html2 = HTMLDocument()
-        print(html2.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
-        html3 = HTMLDocument()
+        print(html1.render('Relatório aluno 2', 'Faltas', 'aluno 2'))
         print(html1.render('Relatório aluno 3', 'Atividades', 'aluno 3'))
 
 if __name__ == "__main__":
      cl = Client()
      cl.gera_htmls() # Com prototype. Criamos um objeto o clonamos os restantes
-     #cl.gera_htmls_sem_prot() Sem prototype. #Criamos e inicializamos 3 objetos
